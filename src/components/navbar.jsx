@@ -5,13 +5,16 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="logo">
-        <a href="#">Balbin & Upson</a>
+        <a href="/">Balbin & Upson</a>
       </div>
 
       <div className="right-nav">
         <ul className="nav-links">
           <li className="nav-link">
-            <a href="#" className="link">Home</a>
+            <a href="/" className="link">Home</a>
+          </li>
+          <li className="nav-link">
+            <a href="/" className="link">Free Resources</a>
           </li>
           <li className="nav-link">
             <a href="#" className="link">Services</a>
