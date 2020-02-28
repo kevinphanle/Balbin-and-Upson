@@ -17,13 +17,13 @@ function Navbar() {
             <a href="/" className="link">Free Resources</a>
           </li>
           <li className="nav-link">
-            <a href="#" className="link">Services</a>
+            <a href="/" className="link">Services</a>
           </li>
           <li className="nav-link">
-            <a href="#" className="link">Testimonials</a>
+            <a href="/" className="link">Testimonials</a>
           </li>
           <li className="nav-link">
-            <a href="#" className="link">About Us</a>
+            <a href="/" className="link">About Us</a>
           </li>
         </ul>
       </div>
