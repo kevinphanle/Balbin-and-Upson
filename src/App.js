@@ -1,12 +1,14 @@
 import React from 'react';
-import Portfolio from './components/portfolio'
+import { Switch, Route } from 'react-router-dom';
+import Portfolio from './components/frontpage/portfolio';
+
 import './styles/App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <Portfolio />
-    </div>
+    <Switch>
+      <Route path="/" component={Portfolio} />
+    </Switch>
   );
 }
 

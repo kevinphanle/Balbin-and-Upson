@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Intro() {
 
   return (
@@ -12,11 +13,13 @@ function Intro() {
         </div>
 
         <p>Local Tax Business located in South San Jose, helping and educating families and local businesses on federal and state taxes.</p>
+
+
+        <a href="#services" className="scroll">
+          <i className="fas fa-long-arrow-alt-down"></i>
+        </a>
       </div>
 
-      <a href="/" class="scroll">
-        <img src="../images/down.png" alt=""/>
-      </a>
     </div>
   )
 }
