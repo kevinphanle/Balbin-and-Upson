@@ -2,20 +2,25 @@ let team = [
   {
     "name": "Leah Upson",
     "description": "the upson",
-    "photo": "leah.HEIC"
+    "photo": "https://balbin-upson-dev.s3-us-west-1.amazonaws.com/IMG_2869.HEIC"
   },
   {
     "name": "Robert Balbin",
-    "description": "the balbin"
+    "description": "the balbin",
+    "photo": "https://balbin-upson-dev.s3-us-west-1.amazonaws.com/IMG_0651.JPG"
   },
   {
     "name": "Bert",
-    "description": "tax dog mascot"
+    "description": "tax dog mascot",
+    "photo": "https://balbin-upson-dev.s3-us-west-1.amazonaws.com/IMG_0651.JPG"
   },
   {
     "name": "Hank",
-    "description": "guard dog"
+    "description": "guard dog",
+    "photo": "https://balbin-upson-dev.s3-us-west-1.amazonaws.com/IMG_0651.JPG"
   }
 ];
+
+//test est
 
 export default team;
