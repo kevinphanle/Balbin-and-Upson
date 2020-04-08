@@ -5,14 +5,18 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: 'Roboto Condensed',Arial, Helvetica, sans-serif;
+  overscroll-behavior-y: none;
+  font-family: 'Roboto',Arial, Helvetica, sans-serif;
 }
 
+#root {
+  min-height: 100vh;
+
+}
 
 .wrapper {
-  min-height: 100vh;
   overflow: hidden;
-  
+  position: relative;
 }
 
 .navbar {
@@ -162,8 +166,8 @@ body {
 
   .services {
     width: 80%;
-    margin: auto;
-    height: 80vh;
+    margin: 80px auto;
+    height: fit-content;
 
     .services-head {
       display: flex;
@@ -174,8 +178,10 @@ body {
 
       h3 {
         font-size: $fontsize * 2;
-        margin: 80px 0 20px 0;
-        text-shadow: 2px 2px 3px #1D6341;
+        margin: 0 auto;
+        // text-shadow: 2px 2px 3px #1D6341;
+        border-bottom: 2px solid lightgrey;
+        // width: 100%;
       }
 
       p {
@@ -219,18 +225,19 @@ body {
   }
 
   .team {
-    border: 1px solid blue;
-    background: #1D6341;
+    background: rgb(24, 83, 55);
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    height: fit-content;
     width: 100%;
+    padding: 20px 0;
 
     h2 {
       color: white;
       font-size: 50px;
       padding-bottom: 0;
+      margin: 0;
     }
 
     .member-list {
@@ -240,24 +247,29 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      column-gap: 20px;
-      row-gap: 20px;
+      column-gap: 50px;
+      row-gap: 50px;
 
       .team-member {
         width: 100%;
-        height: 100%;
-        border: 1px solid white;
-        margin-bottom: 20px;
+        // height: 100%;
+        border: 5px solid lightseagreen;
+        // margin-bottom: 20px;
         display: flex;
+        align-items: center;
         background: white;
         border-radius: 5px;
 
         .photo {
-          width: 40%;
-          background: purple;
-          margin: 20px;
+          width: 200px;
+          height: 200px;
+          background: grey;
+          margin: 20px 0 20px 20px;
+          
+          
 
           img {
+            border-radius: 50%; 
             width: 100%;
             height: 100%;
           }
@@ -265,13 +277,64 @@ body {
 
         .info {
           width: 60%;
+          margin: 20px;
 
           h3 {
             font-size: $fontsize * 1.5;
+            margin: 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid lightgrey;
+          }
+
+          p {
+            // margin: 0;
+            font-size: $fontsize;
           }
         }
       }
     }
   }
 
+}
+
+// ------------ FOOTER ---------------------
+
+.footer {
+  background: rgb(67, 93, 69);
+  padding: 30px 0;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+
+  .wrapper {
+    width: 80%;
+    margin: auto;
+
+    .info {
+      margin: 0;
+      text-align: center;
+
+      a {
+        padding: 20px 0;
+        margin-right: 10px;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    
+  }
+
+}
+
+// -------------RESOURCES---------------
+
+.resources {
+  height: 80vh;
 }

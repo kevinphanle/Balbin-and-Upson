@@ -11,7 +11,6 @@ function Team() {
           team.map((member,i) => {
             return <div className="team-member" key={i}>
               <div className="photo">
-                {console.log(member)}
                 <img src={member.photo} alt=""/>
               </div>
               <div className="info">
