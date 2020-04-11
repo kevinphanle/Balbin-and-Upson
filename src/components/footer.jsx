@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer(props) { 
   return(
@@ -6,8 +7,13 @@ function Footer(props) {
       <div className="wrapper">
 
         <div className="info">
-          <a href="/">Balbin&Upson</a>
-          <a href="/">Useful Links</a>
+          <Link
+            to='/'
+          >Balbin&Upson</Link>
+          <Link
+            to='/resources'
+          >Free Resources</Link>
+          
         </div>
       </div>
     </div>

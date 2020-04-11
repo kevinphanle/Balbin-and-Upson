@@ -8,11 +8,9 @@ function Portfolio() {
 
   return (
     <div className="wrapper">
-      <div className="main">
-        <Intro />
-        <Services />
-        <Team />
-      </div>
+      <Intro />
+      <Services />
+      <Team />
     </div>
   )
 }

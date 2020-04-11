@@ -5,13 +5,14 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 
 import './styles/App.scss';
-import Resources from './components/resources';
+import Resources from './components/resources/resources';
+import About from './components/aboutus/about';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      
+    <div className="main">
+      <Navbar/>
+
       <Switch>
         <Route exact path="/" >
           <Portfolio/>
@@ -19,10 +20,13 @@ function App() {
         <Route exact path="/resources" >
           <Resources/>
         </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
       </Switch>
 
       <Footer />
-    </>
+    </div>
   );
 }
 
