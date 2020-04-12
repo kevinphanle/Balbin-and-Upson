@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 function Navbar(props) {
-  // const { navbarStyles } = props
-  
   const [navBackground, setNavBackground] = useState(false)
   let location = useLocation();
 
@@ -55,18 +53,6 @@ function Navbar(props) {
                 Home
               </NavLink>
             </li>
-            {/* <li className="nav-link">
-              <NavLink
-                to="/"
-                className="link"
-                style={{ color: navbarStyles.textColor }}
-              >
-                Services
-              </NavLink>
-            </li> */}
-            {/* <li className="nav-link">
-              <a href="/" className="link" style={{color: navbarStyles.textColor}}>Testimonials</a>
-            </li> */}
             <li className="nav-link">
             
               <NavLink
@@ -83,7 +69,16 @@ function Navbar(props) {
                 style={{ color: navbarStyles.textColor }}>
                   About Us
               </NavLink>
-            </li>
+          </li>
+          <li className="nav-link">
+            <NavLink
+              to="/contact"
+              className="link"
+              style={{ color: navbarStyles.textColor }}
+            >
+              Contact
+            </NavLink>
+          </li>
           </ul>
         </div>
 

@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import './styles/App.scss';
 import Resources from './components/resources/resources';
 import About from './components/aboutus/about';
+import Contact from './components/contact/contact';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path="/about">
           <About />
+        </Route>
+        <Route exact path="/contact">
+          <Contact/>
         </Route>
       </Switch>
 
