@@ -6,7 +6,7 @@ const creds = require('./config');
 
 var transport = {
     service: 'gmail',
-    host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
+    host: 'smtp.gmail.com',
     port: 465,
     auth: {
       user: creds.USER,
@@ -29,7 +29,7 @@ router.post('/send', (req, res, next) => {
   var email = req.body.email
   var phone = req.body.phone
   var message = req.body.message
-  var content = `name: ${name} \n email: ${email} \n phone: ${phone} \n\n message: \n\n ${message} `
+  var content = `name: ${name}\nemail: ${email}\nphone: ${phone}\n\nmessage: \n\n${message} `
 
   var mail = {
     from: name,
@@ -45,7 +45,7 @@ router.post('/send', (req, res, next) => {
       })
     } else {
       res.json({
-       status: 'success'
+        status: 'success'
       })
     }
   })

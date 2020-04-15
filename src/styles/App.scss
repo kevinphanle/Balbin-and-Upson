@@ -7,6 +7,7 @@ body {
   width: 100%;
   overscroll-behavior-y: none;
   font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  background-color: $offwhite;
 }
 
 #root {
@@ -35,6 +36,7 @@ body {
     align-items: center;
     margin-left: 50px;
     text-transform: uppercase;
+    
 
     a {
       text-decoration: none;
@@ -65,15 +67,21 @@ body {
       li {
         // margin: 20px;
         font-size: $fontsize;
+        height: 100%;
         
         a {
           text-decoration: none;
           text-transform: uppercase;
-          transition: all .2s;
+          transition: all .4s;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 5px;
+          // font-size: 15px;
 
           &:hover {
-            color: #BCE784 !important;
-            font-size: $fontsize * 1.2;
+            color: $limegreen !important;
+            // font-size: $fontsize * 1.2;
+            border-bottom: 1px solid $limegreen;
           }
         }
       }
@@ -88,7 +96,7 @@ body {
 }
 
 .intro {
-  background: #1D6341;
+  background: $dgreen;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -172,6 +180,8 @@ body {
   margin: 0 auto;
   padding: 80px 0;
   height: fit-content;
+  color: $dgray;
+
 
   .services-head {
     display: flex;
@@ -181,10 +191,10 @@ body {
     margin-bottom: 40px;
 
     h3 {
-      font-size: $fontsize * 2;
+      font-size: $fontsize * 3;
       margin: 0 auto;
       // text-shadow: 2px 2px 3px #1D6341;
-      border-bottom: 2px solid lightgrey;
+      // border-bottom: 2px solid lightgrey;
       // width: 100%;
     }
 
@@ -203,6 +213,7 @@ body {
       margin: 0;
       padding: 0;
       width: 100%;
+      position: relative;
 
       .card {
         width: 300px;
@@ -213,15 +224,20 @@ body {
         justify-content: space-evenly;
         align-items: center;
         border-radius: 5px;
+        border-bottom: 5px solid transparent;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         i {
           font-size: $fontsize * 3;
-          color: #1D6341;
+          color: $dgreen;
         }
 
         h3 {
           text-align: center;
+        }
+
+        &:hover {
+          border-bottom: 5px solid $dgreen;
         }
       }
     }
@@ -229,19 +245,23 @@ body {
 }
 
 .team {
-  background: $greentext;
+  background: #FAFAFA;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: fit-content;
   width: 100%;
-  padding: 20px 0;
+  padding: 80px 0 268px 0;
 
   h2 {
-    color: white;
-    font-size: 50px;
+    color: #444444;
+    font-size: $fontsize * 3;
     padding-bottom: 0;
     margin: 0;
+  }
+
+  p {
+    font-size: $fontsize;
   }
 
   .member-list {
@@ -253,11 +273,13 @@ body {
     grid-template-rows: 1fr 1fr;
     column-gap: 50px;
     row-gap: 50px;
+    color: $dgray;
+
 
     .team-member {
       width: 100%;
       // height: 100%;
-      border: 5px solid $lgray;
+      border: 5px solid $palegreen;
       // margin-bottom: 20px;
       display: flex;
       align-items: center;
@@ -266,14 +288,12 @@ body {
 
       .photo {
         width: 200px;
-        height: 200px;
+        height: 275px;
         // background: grey;
-        margin: 20px 0 20px 20px;
+        margin: 20px;
         
-        
-
         img {
-          border-radius: 50%; 
+          // border-radius: 50%; 
           width: 100%;
           height: 100%;
         }
@@ -281,13 +301,22 @@ body {
 
       .info {
         width: 60%;
-        margin: 20px;
+        margin: 20px 20px 20px 0;
 
         h3 {
           font-size: $fontsize * 1.5;
           margin: 0;
           padding-bottom: 5px;
+        }
+
+        .member-title {
+          margin: 0;
+          padding-bottom: 10px;
           border-bottom: 2px solid lightgrey;
+          font-size: $fontsize  * .80;
+          color: $darkblue;
+          text-transform: uppercase;
+          letter-spacing: 1px;
         }
 
         p {
@@ -302,9 +331,9 @@ body {
 // ------------ FOOTER ---------------------
 
 .footer {
-  background: $darkblue;
-  padding: 30px 0;
-  color: white;
+  background: $dgreen;
+  padding: 80px 0;
+  color: $offwhite;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -325,17 +354,26 @@ body {
         margin: 0;
       }
 
+      .logo-footer {
+        font-size: $fontsize * 2;
+        line-height: 1;
+        color: $limegreen;
+        margin-bottom: 20px;
+      }
+
 
       a {
         // padding: 20px 0;
         margin-right: 10px;
-        color: white;
+        color: $limegreen;
         text-decoration: none;
         display: block;
+        transition: all .4s;
         
 
         &:hover {
           text-decoration: underline;
+          color: $offwhite;
         }
       }
     }
@@ -349,9 +387,11 @@ body {
 
 .resources {
   height: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
   width: 80%;
   margin: auto;
+  color: $dgray;
+
 
   h2 {
     text-align: center;
@@ -359,6 +399,7 @@ body {
     // border-bottom: rgb(0, 42, 0) solid 1px;
     letter-spacing: 1px;
     font-weight: bold;
+    margin: 80px 0;
   }
 
   .links {
@@ -386,7 +427,7 @@ body {
       th {
         background: #f6f6f6;
         padding: .5rem;
-        color: #323232;
+        color: $dgray;
         // height: 50px;
         text-align: left;
       }
@@ -394,9 +435,9 @@ body {
       tr {
 
         td {
-          border: 1px solid #2E5339;
+          border: 1px solid $dgray;
           padding: .5rem;
-          color: #323232;
+          color: $dgray;
           height: 50px;
         }
       }
@@ -407,18 +448,26 @@ body {
 // ---------- ABOUT-----
 
 .about {
-  padding-top: 80px;
+  padding-top: 60px;
   width: 80%;
   margin: auto;
+  color: $dgray;
+
 
   .header-img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 80px auto;
     width: 50%;
 
     img {
       width: 100%;
+    }
+  }
+
+  .aboutus {
+
+    p {
+      margin: 20px 0;
     }
   }
 }
@@ -426,9 +475,19 @@ body {
 // ------- CONTACT ------
 
 .contact_us {
-  padding-top: 80px;
+  padding-top: 60px;
   width: 80%;
   margin: auto;
+  color: $dgray;
+
+  h2 {
+    font-size: $fontsize * 2;
+    margin: 80px 0 0 0;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
 
   h2, p {
     text-align: center;
@@ -436,6 +495,8 @@ body {
 
   form {
     // border: 1px solid black;
+    color: $dgray;
+
 
     .form-group {
       text-align: center;
@@ -445,22 +506,73 @@ body {
         height: 2.5rem;
         margin-bottom: 20px;
         font-size: $fontsize;
-        border: 2px solid grey;
+        padding: 0 20px;
+        color: $dgray;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+
+
+        &:focus {
+          background-color: $palegreen;
+          outline: none;
+
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 20px;
+        font-size: $fontsize;
+        padding: 12px 20px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+
+        &:focus {
+          background-color: $palegreen;
+          outline: none;
+
+        }
       }
     }
 
     .contact-form-btn {
-      width: 100px;
+      width: 200px;
+      height: 50px;
       background: $greentext;
       font-size: $fontsize;
       color: white;
       border: none;
+      border-radius: 2%;
+      transition: all .4s;
 
       &:hover {
         cursor: pointer;
-        width: 200px;
-        font-size: $fontsize * 2;
+        background: none;
+        border: 2px solid $greentext;
+        color: #444;
+      }
+
+      &:focus {
+        outline: none;
       }
     }
+  }
+}
+
+.sent-confirmation {
+  text-align: center;
+  padding: 20px;
+  font-size: $fontsize * 2;
+  width: 500px;
+  margin: auto;
+  background: #7FB069;
+  color: white;
+
+  img {
+    width: 100%;
   }
 }

@@ -10,9 +10,10 @@ function Footer(props) {
           <div className="contact">
             <Link
               to='/'
+              className="logo-footer"
             >Balbin&Upson</Link>
             <p>balbin.upson@gmail.com</p>
-            <p>(408) 972-1663</p>
+            <p>408.972.1663</p>
 
           </div>
 

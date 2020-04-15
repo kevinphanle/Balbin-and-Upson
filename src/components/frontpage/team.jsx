@@ -5,7 +5,8 @@ function Team() {
 
   return (
     <section className="team">
-      <h2>Meet the team!</h2>
+      <h2>Meet the team</h2>
+      <p>Always willing to say "Hi!"!</p>
       <div className="member-list">
         {
           team.map((member,i) => {
@@ -15,6 +16,7 @@ function Team() {
               </div>
               <div className="info">
                 <h3>{member.name}</h3>
+                <p className="member-title">{member.title}</p>
                 <p>{member.description}</p>
               </div>
             </div>

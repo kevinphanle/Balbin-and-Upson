@@ -25,9 +25,11 @@ function Navbar(props) {
   let navbarStyles = {};
 
   if (navBackground || location.pathname !== "/") {
-    navbarStyles.backgroundColor = 'white';
-    navbarStyles.textColor = 'black';
-    navbarStyles.border = '1px solid lightgray';
+    // navbarStyles.backgroundColor = 'white';
+    navbarStyles.backgroundColor = 'rgba(29, 99, 65, .9)';
+    // navbarStyles.textColor = '#444';
+    navbarStyles.textColor = '#F7FFF6';
+    // navbarStyles.border = '1px solid lightgray';
     navbarStyles.height = '60px';
   } else {
     navbarStyles.backgroundColor = 'transparent';
@@ -59,7 +61,7 @@ function Navbar(props) {
                 to="/resources"
                 className="link"
                 style={{ color: navbarStyles.textColor }}>
-                  Free Resources
+                  Resources
               </NavLink>
             </li>
             <li className="nav-link">

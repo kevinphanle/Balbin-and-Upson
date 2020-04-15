@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import bert from '../../images/bert.JPG';
 
 function Contact(props) {
   const [name, setName] = useState('');
@@ -7,6 +8,7 @@ function Contact(props) {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [isSent, setSent] = useState(false);
+  const [wait, setWait] = useState(false);
 
   const data = {
     name,
@@ -17,14 +19,15 @@ function Contact(props) {
   
   const handleSubmit = (e) =>{
     e.preventDefault();
+    setWait(true);
     axios({
       method: "POST", 
       url:"http://localhost:3002/send", 
       data:  data
-    }).then((response)=>{
+    }).then((response) => {
       if (response.data.status === 'success') {
         setSent(true)
-        alert("Message Sent."); 
+        // alert("Message Sent."); 
         // this.resetForm()
       }else if(response.data.status === 'fail'){
         alert("Message failed to send.")
@@ -32,7 +35,15 @@ function Contact(props) {
     })
   }
 
-  let form = isSent ? <p className="sent-confirmation">Sent</p> :
+  let complete = 
+    <div className="sent-confirmation">
+      Sent! Thank you!
+      <img src={bert} alt=""/>
+    </div>
+  
+  let waitdialog = wait ? <p>Waiting...</p> : null;
+
+  let form = isSent ? complete :
     <form onSubmit={handleSubmit} method="POST">
     <div className="form-group">
       <input
@@ -60,21 +71,25 @@ function Contact(props) {
         className="form-control" aria-describedby="phonenumberHelp"
         value={phone}
         onChange={e => setPhone(e.target.value)}
-        placeholder="Phone Number"
+        placeholder="Phone"
       />
     </div>
 
     <div className="form-group">
       <textarea
-        className="form-control"
-        rows="5"
+        // rows="5"
         value={message}
         onChange={e => setMessage(e.target.value)}
         placeholder="You're awesome...!"
       />
     </div>
 
-    <button type="submit" className="contact-form-btn">Submit</button>
+      <button
+        type="submit" className="contact-form-btn"
+        
+      >Submit</button>
+      
+      {waitdialog}
   </form>
 
 
