@@ -6,6 +6,7 @@ function About(props) {
   console.log(bert);
   return (
     <div className="about">
+      <h2>A team of <span>big dreamers</span></h2>
       <div className="header-img">
         <img src={bert} alt=""/>
       </div>

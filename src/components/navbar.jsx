@@ -24,22 +24,34 @@ function Navbar(props) {
 
   let navbarStyles = {};
 
-  if (navBackground || location.pathname !== "/") {
-    // navbarStyles.backgroundColor = 'white';
-    navbarStyles.backgroundColor = 'rgba(29, 99, 65, .9)';
-    // navbarStyles.textColor = '#444';
-    navbarStyles.textColor = '#F7FFF6';
-    // navbarStyles.border = '1px solid lightgray';
-    navbarStyles.height = '60px';
-  } else {
-    navbarStyles.backgroundColor = 'transparent';
-    navbarStyles.textColor = '#F7FFF6';
-    navbarStyles.border = 'none';
-    navbarStyles.height = '100px';
-  }
+  if (location.pathname === "/") {
+    if (navBackground) {
+      navbarStyles.backgroundColor = 'rgba(29, 99, 65, .9)';
+      navbarStyles.textColor = '#F7FFF6';
+      navbarStyles.boxShadow = "0 0px 20px 0px rgba(0,0,0,.7)"
+      navbarStyles.height = '60px';
+    } else {
+      navbarStyles.backgroundColor = 'transparent';
+      navbarStyles.textColor = '#F7FFF6';
+      navbarStyles.border = 'none';
+      navbarStyles.height = '100px';
+    }
+  } else if (location.pathname !== "/") {
+    if (navBackground) {
+      navbarStyles.backgroundColor = '#fdfdfd';
+      navbarStyles.textColor = '#444';
+      navbarStyles.border = '1px solid lightgray';
+      navbarStyles.height = '60px';
+      navbarStyles.boxShadow = "0 0px 10px 0px rgba(0,0,0,.4)"
+    } else {
+      navbarStyles.backgroundColor = '#fdfdfd';
+      navbarStyles.textColor = '#444';
+      navbarStyles.height = '60px';
+    }
+  } 
 
   return (
-      <div className="navbar" style={{backgroundColor: navbarStyles.backgroundColor, borderBottom: navbarStyles.border, height: navbarStyles.height}}>
+      <div className="navbar" style={{backgroundColor: navbarStyles.backgroundColor, borderBottom: navbarStyles.border, height: navbarStyles.height, boxShadow: navbarStyles.boxShadow}}>
         <div className="logo">
           <NavLink to='/' style={{color: navbarStyles.textColor }}>Balbin & Upson</NavLink>
         </div>

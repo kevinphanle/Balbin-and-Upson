@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import ServiceCards from './service-cards';
+import CardDetail from './servicecard_details';
 
 function Services() {
+  const [cardNum, setcardNum] = useState(0);
 
   return (
     <section className="services" id="services">
@@ -12,10 +14,13 @@ function Services() {
         {/* <p>Taxes</p> */}
       </div>
       <div className="services-body">
-        <ServiceCards />
+        <ServiceCards callback={setcardNum.bind(this)}/>
+        <CardDetail data={cardNum}/>
       </div>
     </section>
   )
 }
+
+
 
 export default Services;

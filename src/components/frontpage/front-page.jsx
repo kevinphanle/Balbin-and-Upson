@@ -4,7 +4,7 @@ import Intro from './intro';
 import Services from './services';
 import Team from './team';
 
-function Portfolio() {
+function FrontPage() {
 
   return (
     <div className="wrapper">
@@ -15,4 +15,4 @@ function Portfolio() {
   )
 }
 
-export default Portfolio;
+export default FrontPage;

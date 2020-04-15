@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Portfolio from './components/frontpage/portfolio';
+import FrontPage from './components/frontpage/front-page';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
@@ -16,7 +16,7 @@ function App() {
 
       <Switch>
         <Route exact path="/" >
-          <Portfolio/>
+          <FrontPage/>
         </Route>
         <Route exact path="/resources" >
           <Resources/>
@@ -29,7 +29,9 @@ function App() {
         </Route>
       </Switch>
 
-      <Footer />
+      <Route path="/">
+        <Footer />
+      </Route>
     </div>
   );
 }

@@ -1,9 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import FooterContact from './footer-contact';
 
 function Footer(props) { 
+  let location = useLocation();
+
+  let extendedFooter;
+
+  if (location.pathname !== "/contact") {
+  
+    extendedFooter = <FooterContact/>
+  }
+
   return(
     <div className="footer">
+      
+      {extendedFooter}
+      
       <div className="wrapper">
 
         <div className="info">

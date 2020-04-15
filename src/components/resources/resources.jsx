@@ -16,6 +16,7 @@ function Resources(props) {
   return (
     <div className="resources">
       <h2>Resources</h2>
+      <p>Here are some helpful links:</p>
       <div className="links">
         
         <table>
