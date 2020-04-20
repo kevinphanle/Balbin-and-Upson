@@ -28,7 +28,7 @@ function ServiceCard(props) {
                 style={{color: card.color}}
               ></i>
               <h3 style={{color: card.color}}>{card.title}</h3>
-              {/* <p>{card.description}</p> */}
+              
             </li>
           )
         })
