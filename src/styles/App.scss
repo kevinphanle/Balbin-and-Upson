@@ -33,7 +33,6 @@ body {
   transition: all .2s;
 
   .logo {
-    // border: 1px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +56,6 @@ body {
     width: 50%;
     display: flex;
     align-items: center;
-    // border: 1px solid green;
 
     .nav-links {
       width: 100%;
@@ -68,7 +66,6 @@ body {
       
 
       li {
-        // margin: 20px;
         font-size: $fontsize;
         height: 100%;
         
@@ -79,11 +76,9 @@ body {
           width: 100%;
           height: 100%;
           padding-bottom: 5px;
-          // font-size: 15px;
 
           &:hover {
             color: $limegreen !important;
-            // font-size: $fontsize * 1.2;
             border-bottom: 1px solid $limegreen;
           }
         }
@@ -196,9 +191,6 @@ body {
     h3 {
       font-size: $fontsize * 3;
       margin: 0 auto;
-      // text-shadow: 2px 2px 3px #1D6341;
-      // border-bottom: 2px solid lightgrey;
-      // width: 100%;
     }
 
     p {
@@ -227,8 +219,6 @@ body {
         justify-content: space-evenly;
         align-items: center;
         border-radius: 5px;
-        // border-bottom: 5px solid transparent;
-        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border: 5px solid transparent;
         transition: all .4s;
 
@@ -244,7 +234,6 @@ body {
         }
 
         &:hover {
-          // border-bottom: 5px solid $dgreen;
           border: 5px solid $dgreen;
           cursor: pointer;
         }
@@ -254,9 +243,9 @@ body {
     .cardDetails {
     
       p {
-        font-size: $fontsize * 1.5;
+        font-size: $fontsize * 1.8;
+        font-weight: 300;
         margin: 40px 0 0 0;
-        color: $dgreen;
       }
     }
   }
@@ -296,9 +285,7 @@ body {
 
     .team-member {
       width: 100%;
-      // height: 100%;
       border: 5px solid $dgreen;
-      // margin-bottom: 20px;
       display: flex;
       align-items: center;
       background: $offwhite;
@@ -307,11 +294,9 @@ body {
       .photo {
         width: 200px;
         height: 275px;
-        // background: grey;
         margin: 20px;
         
         img {
-          // border-radius: 50%; 
           width: 100%;
           height: 100%;
         }
@@ -338,7 +323,6 @@ body {
         }
 
         p {
-          // margin: 0;
           font-size: $fontsize;
         }
       }
@@ -355,7 +339,6 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
-  // height: 2.5rem;
 
   .wrapper {
     width: 80%;
@@ -363,7 +346,6 @@ body {
 
     .info {
       margin: 0;
-      // text-align: center;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -382,7 +364,6 @@ body {
 
 
       a {
-        // padding: 20px 0;
         margin-right: 10px;
         color: $limegreen;
         text-decoration: none;
@@ -416,7 +397,6 @@ body {
   h2 {
     text-align: center;
     font-size: $fontsize * 2;
-    // border-bottom: rgb(0, 42, 0) solid 1px;
     letter-spacing: 1px;
     font-weight: bold;
     margin: 80px 0 0 0;
@@ -439,7 +419,6 @@ body {
       &:hover {
         
         text-decoration: underline;
-        // font-size: $fontsize * 1.1;
       }
     }
     
@@ -454,7 +433,6 @@ body {
         background: #f6f6f6;
         padding: .5rem;
         color: $dgray;
-        // height: 50px;
         text-align: left;
       }
 
@@ -534,7 +512,6 @@ body {
   }
 
   form {
-    // border: 1px solid black;
     color: $dgray;
     width: 60%;
     margin: auto;
