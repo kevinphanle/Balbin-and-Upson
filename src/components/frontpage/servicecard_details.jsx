@@ -5,6 +5,7 @@ import cards from './servicecardObjects';
 function CardDetail(props) {
 
   const num = props.data;
+  console.log(num)
   const card = cards[num];
   
   return (
