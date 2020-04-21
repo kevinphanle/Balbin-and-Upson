@@ -5,7 +5,6 @@ import Card from './card';
 
 function ServiceCard(props) {
 
-  // const [hoverRef, isHovered] = useHover();
   const [numfromcard, setnumfromcard] = useState(0);
 
 
@@ -13,14 +12,12 @@ function ServiceCard(props) {
     props.callback(i);
   }
 
-  // console.log(numfromcard);
-
   let cardstack = (arr) => {
     return (
       arr.map((card, i) => {
         change(numfromcard)
         return (
-          <Card card={card} num={i} callback={setnumfromcard.bind(this)}/>
+          <Card card={card} num={i} key={i} callback={setnumfromcard.bind(this)}/>
         )
       })
     )
