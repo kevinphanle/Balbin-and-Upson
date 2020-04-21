@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import cards from './servicecardObjects';
 
 
 function ServiceCard(props) {
+
+  const [hoverRef, isHovered] = useHover();
 
   const change = (i) => {
     props.callback(i);
@@ -12,7 +14,7 @@ function ServiceCard(props) {
     background: ''
   }
 
-  
+
 
   let cardstack = () => {
     return (
@@ -22,6 +24,7 @@ function ServiceCard(props) {
             className="card"
             key={i}
             onMouseOver={() => change(i)}
+            ref={hoverRef}
             style={{border: "5px solid" + card.color }}
           >
             <i
