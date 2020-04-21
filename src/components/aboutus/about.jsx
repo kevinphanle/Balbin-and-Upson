@@ -3,7 +3,6 @@ import bert from '../../images/bert.JPG';
 
 function About(props) {
 
-  console.log(bert);
   return (
     <div className="about">
       <h2>A team of <span>big dreamers</span></h2>
