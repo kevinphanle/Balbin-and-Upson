@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Intro from './intro';
-import Services from './services';
-import Team from './team';
+import Services from './servicecards/services';
+import Team from './team/team';
 
 function FrontPage() {
 
