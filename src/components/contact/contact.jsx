@@ -37,7 +37,7 @@ function Contact(props) {
 
   let complete = 
     <div className="sent-confirmation">
-      Sent! Thank you!
+      <p> Sent! Thank you!</p>
       <img src={bert} alt=""/>
     </div>
   

@@ -11,6 +11,8 @@ function Card(props) {
     props.callback(i);
   }
 
+  let styles;
+
   let regularStyle = {
     border: "5px solid" + card.color,
     icon: {
@@ -31,19 +33,26 @@ function Card(props) {
       color: "#fdfdfd"
     }
   }
+
+  if (isHovered) {
+    styles = hoverStyle;
+  } else {
+    styles = regularStyle;
+  }
   
   return (
     <li
       className="card"
-      onMouseOver={() => change(props.num)}
+      onMouseEnter={() => change(props.num)}
+      onFocus={() => styles = hoverStyle}
       ref={hoverRef}
-      style={isHovered ? hoverStyle : regularStyle}
+      style={styles}
     >
       <i
         className={'far fa-' + card.icon}
-        style={isHovered ? hoverStyle.icon : regularStyle.icon}
+        style={styles.icon}
       ></i>
-      <h3 style={isHovered ? hoverStyle.text : regularStyle.text }>{card.title}</h3>
+      <h3 style={styles.text }>{card.title}</h3>
       
     </li>
   )

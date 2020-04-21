@@ -211,7 +211,9 @@ body {
       position: relative;
 
       .card {
-        width: 300px;
+        min-width: 100px;
+        // max-width: 200px;
+        width: 100%;
         margin-right: 20px;
         padding: 20px;
         display: flex;
@@ -588,9 +590,13 @@ body {
   padding: 20px;
   font-size: $fontsize * 2;
   width: 500px;
-  margin: auto;
+  margin:auto;
   background: #7FB069;
   color: white;
+
+  p {
+    margin: 0 auto 40px;
+  }
 
   img {
     width: 100%;
