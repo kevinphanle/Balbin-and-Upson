@@ -11,7 +11,6 @@ function Services() {
       <div className="services-head">
         <h3>Our Core Services</h3>
         <p>While we are always looking to expand our business, we have focused our attention to these areas:</p>
-        {/* <p>Taxes</p> */}
       </div>
       <div className="services-body">
         <ServiceCards callback={setcardNum.bind(this)}/>
