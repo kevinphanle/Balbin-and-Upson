@@ -24,7 +24,7 @@ function Footer(props) {
             <Link
               to='/'
               className="logo-footer"
-            >Balbin&Upson</Link>
+            >Balbin & Upson</Link>
             <p>balbin.upson@gmail.com</p>
             <p>408.972.1663</p>
 
@@ -32,8 +32,11 @@ function Footer(props) {
 
           <div className="page-links">
             <Link
+              to='/covid19'
+            >Covid-19</Link>
+            <Link
               to='/resources'
-            >Free Resources</Link>
+            >Resources</Link>
             <Link
               to="/about"
             >About Us</Link>

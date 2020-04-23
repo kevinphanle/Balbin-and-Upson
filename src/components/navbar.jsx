@@ -70,6 +70,15 @@ function Navbar(props) {
             <li className="nav-link">
             
               <NavLink
+                to="/covid19"
+                className="link"
+                style={{ color: navbarStyles.textColor }}>
+                  Covid-19
+              </NavLink>
+            </li>
+            <li className="nav-link">
+            
+              <NavLink
                 to="/resources"
                 className="link"
                 style={{ color: navbarStyles.textColor }}>

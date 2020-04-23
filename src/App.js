@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 
 import './styles/App.scss';
+import Covid from './components/covid-19/covid';
 import Resources from './components/resources/resources';
 import About from './components/aboutus/about';
 import Contact from './components/contact/contact';
@@ -17,6 +18,9 @@ function App() {
       <Switch>
         <Route exact path="/" >
           <FrontPage/>
+        </Route>
+        <Route exact path="/covid19">
+          <Covid />
         </Route>
         <Route exact path="/resources" >
           <Resources/>
