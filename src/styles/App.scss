@@ -45,11 +45,11 @@ body {
     a {
       text-decoration: none;
       font-size: $fontsize * 1.5;
-      color: #F7FFF6;
+      color: $offwhite;
       transition: all .2s;
 
       &:hover {
-        color: #BCE784 !important;
+        color: $limegreen !important;
       }
     }
   }
