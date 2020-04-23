@@ -28,7 +28,7 @@ let cards = [
     "title": "Checkup",
     "description": "Checking up every quarter.",
     "icon": "calendar-check",
-    "color": '#444'
+    "color": '#444232'
   }
 ]
 
