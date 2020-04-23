@@ -2,31 +2,31 @@
 let cards = [
   {
     "title": "Prepare",
-    "description": "Preparing taxes for individuals, businesses, and rental properties.",
+    "description": "Tax Preparation for individuals and businesses.",
     "icon": "address-card",
     "color": '#7FB069'
   },
   {
     "title": "Educate",
-    "description": "Giving knowledge to people who need it.",
+    "description": "Providing relevant tax education.",
     "icon": "lightbulb",
     "color": '#247f53'
   },
   {
     "title": "Plan",
-    "description": "Planning the taxes long term.",
+    "description": "Long-term tax planning to fir your lifestyle.",
     "icon": "money-bill-alt",
     "color": '#004346'
   },
   {
     "title": "Retire",
-    "description": "Planning the taxes for retirement.",
+    "description": "What changes to expect on your taxes when you retire.",
     "icon": "map",
     "color": '#BCE784'
   },
   {
     "title": "Checkup",
-    "description": "Checking up every quarter.",
+    "description": "Payment and W-4 checkups to keep you on track.",
     "icon": "calendar-check",
     "color": '#444232'
   }

@@ -7,7 +7,6 @@ function ServiceCard(props) {
 
   const [numfromcard, setnumfromcard] = useState(0);
 
-
   const change = (i) => {
     props.callback(i);
   }

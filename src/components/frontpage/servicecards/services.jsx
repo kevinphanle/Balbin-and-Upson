@@ -10,7 +10,7 @@ function Services() {
     <section className="services" id="services">
       <div className="services-head">
         <h3>Our Core Services</h3>
-        <p>While we are always looking to expand our business, we have focused our attention to these areas:</p>
+        <p>We specialize in these areas:</p>
       </div>
       <div className="services-body">
         <ServiceCards callback={setcardNum.bind(this)}/>
