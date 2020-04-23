@@ -41,7 +41,7 @@ function Contact(props) {
       <img src={bert} alt=""/>
     </div>
   
-  let waitdialog = wait ? <p>Waiting...</p> : null;
+  let waitdialog = wait ? <p>Sending... Please wait.</p> : null;
 
   let form = isSent ? complete :
     <form onSubmit={handleSubmit} method="POST">
