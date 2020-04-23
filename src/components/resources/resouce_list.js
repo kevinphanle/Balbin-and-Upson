@@ -6,10 +6,10 @@ let list = [
     "description": "Check the status of your refund for the federal"
   },
   {
-    "name": "State Refund Status",
+    "name": "California State Refund Status",
     "source": "https://www.ftb.ca.gov/refund/index.asp",
     "type": "state",
-    "description": "Check the status of your refund for the state"
+    "description": "Check the status of your refund for California state"
   },
   {
     "name": "Pay Your Federal Tax Bill",
@@ -21,7 +21,7 @@ let list = [
     "name": "Pay Your State Tax Bill",
     "source": "https://www.ftb.ca.gov/pay/index.html",
     "type": "state",
-    "description": "Pay your tax bill to the State online"
+    "description": "Pay your tax bill to the California online"
   },
   {
     "name": "Transcripts & Tax Records Federal",
@@ -33,7 +33,7 @@ let list = [
     "name": "Transcripts & Tax Records State",
     "source": "https://www.ftb.ca.gov/myftb/create-an-account.html",
     "type": "state",
-    "description": "View your state transcripts and tax records from previous years"
+    "description": "View your California state transcripts and tax records from previous years"
   },
   {
     "name": "2019 & 2020 Tax Brackets",
