@@ -13,7 +13,9 @@ function About(props) {
       <div className="aboutus">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit velit quas libero rem? Maxime, animi aliquam! Nihil culpa, dignissimos fugiat quam esse, tempora ut nemo excepturi dolor ducimus iste suscipit! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ab numquam, deleniti ea omnis, eaque veritatis reiciendis repellendus maxime molestiae sint ut, eligendi cumque quod magni dicta consectetur laborum minima!
-           
+          
+          <br />
+          
           Lorem ipsum dolor sit amet consectetur adipisicing elit. In animi reprehenderit laboriosam consectetur maiores repudiandae molestias veritatis tempore dolore aliquam quisquam quibusdam ad pariatur illum tempora provident, quas dignissimos quo?
         </p>
       </div>

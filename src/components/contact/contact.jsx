@@ -27,8 +27,6 @@ function Contact(props) {
     }).then((response) => {
       if (response.data.status === 'success') {
         setSent(true)
-        // alert("Message Sent."); 
-        // this.resetForm()
       }else if(response.data.status === 'fail'){
         alert("Message failed to send.")
       }
