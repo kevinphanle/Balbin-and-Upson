@@ -1,13 +1,13 @@
 @import './variables.scss';
 
 @mixin respond-to($media) {
-  @if $media == handhelds {
+  @if $media == phone {
     @media only screen and (max-width: 320px) { @content; }
   }
-  @else if $media == medium-screens {
+  @else if $media == tablet {
     @media only screen and (min-width: 321px) and (max-width: 1024px) { @content; }
   }
-  @else if $media == wide-screens {
+  @else if $media == laptop {
     @media only screen and (min-width: 1024px) { @content; }
   }
 }
@@ -57,10 +57,6 @@ body {
       color: $offwhite;
       transition: all .2s;
 
-      @include respond-to(handhelds) {
-        font-size: 100px;
-      }
-
       &:hover {
         color: $limegreen !important;
       }
@@ -71,6 +67,10 @@ body {
     width: 50%;
     display: flex;
     align-items: center;
+
+    @include respond-to(tablet) {
+      width: 70%;
+    }
 
     .nav-links {
       width: 100%;
@@ -83,6 +83,10 @@ body {
       li {
         font-size: $fontsize;
         height: 100%;
+
+        @include respond-to(phone) {
+          font-size: 10px;
+        }
         
         a {
           text-decoration: none;
