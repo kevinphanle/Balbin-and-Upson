@@ -1,6 +1,4 @@
 @import './variables.scss';
-@import './tablet.scss';
-@import './mobile.scss';
 
 body {
   margin: 0;
@@ -674,3 +672,11 @@ body {
     }
   }
 }
+
+
+
+
+// MEDIA QUERIES
+
+@import url('./tablet.scss') (max-width: 768px);
+// @import './mobile.scss';
