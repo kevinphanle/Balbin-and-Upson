@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
+import Burger from './burger';
+
+import * as menuIcon from '../images/menu.png';
+
 function Navbar(props) {
   const [navBackground, setNavBackground] = useState(false)
+  const { height, width } = useWindowDimensions();
+  const [rightNav, setRightNav] = useState(width >= 768 ? true : false);
+
   let location = useLocation();
 
   const navRef = useRef()
@@ -50,13 +57,19 @@ function Navbar(props) {
     }
   } 
 
+  // if (rightNav) {
+  //   console.log("right nav")
+  // }
+
   return (
       <div className="navbar" style={{backgroundColor: navbarStyles.backgroundColor, borderBottom: navbarStyles.border, height: navbarStyles.height, boxShadow: navbarStyles.boxShadow}}>
         <div className="logo">
           <NavLink to='/' style={{color: navbarStyles.textColor }}>Balbin & Upson</NavLink>
-        </div>
+      </div>
+    
 
-        <div className="right-nav">
+      <div className="right-nav">
+      <Burger/>
           <ul className="nav-links" style={{color: navbarStyles.textColor}}>
             <li className="nav-link">
               <NavLink
@@ -108,6 +121,30 @@ function Navbar(props) {
       </div>
 
   )
+}
+
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
 }
 
 export default Navbar;

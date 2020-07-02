@@ -17,7 +17,7 @@ function Team() {
               <div className="info">
                 <h3>{member.name}</h3>
                 <p className="member-title">{member.title}</p>
-                <p>{member.description}</p>
+                <p className="member-desc">{member.description}</p>
               </div>
             </div>
           })

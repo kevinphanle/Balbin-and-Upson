@@ -17,7 +17,7 @@ function Footer(props) {
       
       {extendedFooter}
       
-      <div className="wrapper">
+      <div className="footer-wrapper">
 
         <div className="info">
           <div className="contact">
