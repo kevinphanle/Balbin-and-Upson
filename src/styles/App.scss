@@ -54,6 +54,13 @@ body {
     margin-left: 50px;
     text-transform: uppercase;  
     width: fit-content;  
+
+    @include respond-to(landscape) {
+      width: 100%;
+    }
+    @include respond-to(phone) {
+      width: 100%;
+    }
     
 
     a {

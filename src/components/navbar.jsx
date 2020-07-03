@@ -73,7 +73,11 @@ function Navbar(props) {
   return (
     <div className="navbar" style={{ backgroundColor: navbarStyles.backgroundColor, borderBottom: navbarStyles.border, height: navbarStyles.height, boxShadow: navbarStyles.boxShadow }} ref={sidebarNode}>
       <div className="logo">
-        <NavLink to='/' style={{ color: navbarStyles.textColor }} onClick={()=> setSidebar(false)}>Balbin & Upson</NavLink>
+        <NavLink to='/' style={{ color: navbarStyles.textColor }} onClick={() => setSidebar(false)}>
+          {
+            width <= 405 ? "B&U" : "Balbin & Upson"
+          }
+          </NavLink>
       </div>
 
 
