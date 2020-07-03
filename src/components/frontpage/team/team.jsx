@@ -5,14 +5,17 @@ function Team() {
 
   return (
     <section className="team">
-      <h2>Meet the team</h2>
-      <p>Always willing to say "Hi!"!</p>
+      <div className="team-head">
+        <h2>Meet the team</h2>
+        <p>Always willing to say "Hi!"!</p>
+
+      </div>
       <div className="member-list">
         {
-          team.map((member,i) => {
+          team.map((member, i) => {
             return <div className="team-member" key={i}>
               <div className="photo">
-                <img src={member.photo} alt=""/>
+                <img src={member.photo} alt="" />
               </div>
               <div className="info">
                 <h3>{member.name}</h3>
