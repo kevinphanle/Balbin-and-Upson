@@ -2,13 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 import Burger from './burger';
+import Sidebar from './sidebar';
 
 import * as menuIcon from '../images/menu.png';
 
 function Navbar(props) {
   const [navBackground, setNavBackground] = useState(false)
   const { height, width } = useWindowDimensions();
-  const [rightNav, setRightNav] = useState(width >= 768 ? true : false);
+  const [sidebar, setSidebar] = useState(false);
 
   let location = useLocation();
 
@@ -28,6 +29,11 @@ function Navbar(props) {
       document.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  const handleSidebar = () => {
+    console.log("sidebar");
+    setSidebar(!sidebar);
+  }
 
   let navbarStyles = {};
 
@@ -55,70 +61,74 @@ function Navbar(props) {
       navbarStyles.textColor = '#444';
       navbarStyles.height = '60px';
     }
-  } 
+  }
 
-  // if (rightNav) {
-  //   console.log("right nav")
-  // }
 
   return (
-      <div className="navbar" style={{backgroundColor: navbarStyles.backgroundColor, borderBottom: navbarStyles.border, height: navbarStyles.height, boxShadow: navbarStyles.boxShadow}}>
-        <div className="logo">
-          <NavLink to='/' style={{color: navbarStyles.textColor }}>Balbin & Upson</NavLink>
+    <div className="navbar" style={{ backgroundColor: navbarStyles.backgroundColor, borderBottom: navbarStyles.border, height: navbarStyles.height, boxShadow: navbarStyles.boxShadow }}>
+      <div className="logo">
+        <NavLink to='/' style={{ color: navbarStyles.textColor }}>Balbin & Upson</NavLink>
       </div>
-    
+
 
       <div className="right-nav">
-      <Burger/>
-          <ul className="nav-links" style={{color: navbarStyles.textColor}}>
-            <li className="nav-link">
-              <NavLink
-                to="/"
-                className="link"
-                style={{ color: navbarStyles.textColor }}
-              >
-                Home
+      {
+          width <= 768 ? <Burger click={handleSidebar} sidebarStatus={sidebar}/> :
+
+            <ul className="nav-links" style={{ color: navbarStyles.textColor }}>
+              <li className="nav-link">
+                <NavLink
+                  to="/"
+                  className="link"
+                  style={{ color: navbarStyles.textColor }}
+                >
+                  Home
               </NavLink>
-            </li>
-            <li className="nav-link">
-            
-              <NavLink
-                to="/covid19"
-                className="link"
-                style={{ color: navbarStyles.textColor }}>
+              </li>
+              <li className="nav-link">
+
+                <NavLink
+                  to="/covid19"
+                  className="link"
+                  style={{ color: navbarStyles.textColor }}>
                   Covid-19
               </NavLink>
-            </li>
-            <li className="nav-link">
-            
-              <NavLink
-                to="/resources"
-                className="link"
-                style={{ color: navbarStyles.textColor }}>
+              </li>
+              <li className="nav-link">
+
+                <NavLink
+                  to="/resources"
+                  className="link"
+                  style={{ color: navbarStyles.textColor }}>
                   Resources
               </NavLink>
-            </li>
-            <li className="nav-link">
-            <NavLink
-                to="/about"
-                className="link"
-                style={{ color: navbarStyles.textColor }}>
+              </li>
+              <li className="nav-link">
+                <NavLink
+                  to="/about"
+                  className="link"
+                  style={{ color: navbarStyles.textColor }}>
                   About Us
               </NavLink>
-          </li>
-          <li className="nav-link">
-            <NavLink
-              to="/contact"
-              className="link"
-              style={{ color: navbarStyles.textColor }}
-            >
-              Contact
+              </li>
+              <li className="nav-link">
+                <NavLink
+                  to="/contact"
+                  className="link"
+                  style={{ color: navbarStyles.textColor }}
+                >
+                  Contact
             </NavLink>
-          </li>
-          </ul>
-        </div>
-
+              </li>
+            </ul>
+      }
       </div>
+
+      {
+        sidebar ? <Sidebar/> : null
+      }
+
+    </div>
 
   )
 }

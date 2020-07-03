@@ -80,25 +80,19 @@ body {
       width: 60%;
     }
 
-    // .menuIcon {
-    //   display: none;
-
-    //   @include respond-to(landscape) {
-    //     display: block;
-    //   }
-    // }'
-
     .burger {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       width: 2rem;
-      height: 2rem;
+      height: 1.5rem;
       background: transparent;
       border: none;
       cursor: pointer;
       padding: 0;
       z-index: 10;
+      position: absolute;
+      right: 50px;
 
       &:focus {
         outline: none;
@@ -109,7 +103,13 @@ body {
         height: .25rem;
         border-radius: 10px;
         transition: all .3s linear;
-        background: #444;
+        background: $offwhite;
+        transform-origin: 1px;
+
+
+        &:first-child {
+          transform: rotate(45deg);
+        }
       }
     }
 
@@ -120,10 +120,6 @@ body {
       justify-content: space-evenly;
       padding: 0;
 
-      // @include respond-to(landscape) {
-      //   display: none;
-      // }
-      
 
       li {
         font-size: $fontsize;
@@ -146,6 +142,35 @@ body {
             border-bottom: 1px solid $limegreen;
           }
         }
+      }
+    }
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $offwhite;
+    height: 100vh;
+    text-align: left;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+
+    a {
+      color: #444;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: $fontsize;
+      font-weight: bold;
+      margin: 2rem 0;
+      transition: all .4s linear;
+
+      &:hover {
+        text-decoration: underline;
+        color: $greentext;
       }
     }
   }
