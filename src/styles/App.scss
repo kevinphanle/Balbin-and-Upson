@@ -2,10 +2,10 @@
 
 @mixin respond-to($media) {
   @if $media == phone {
-    @media only screen and (max-width: 320px) { @content; }
+    @media only screen and (max-width: 380px) { @content; }
   }
   @else if $media == landscape {
-    @media only screen and (min-width: 321px) and (max-width: 768px) { @content; }
+    @media only screen and (min-width: 381px) and (max-width: 768px) { @content; }
   }
   @else if $media == tablet {
     @media only screen and (min-width: 769px) and (max-width: 1023px) { @content; }
@@ -227,7 +227,10 @@ body {
     color: $offwhite;
 
     @include respond-to(phone) {
-      max-width: 200px;
+      max-width: 300px;
+    }
+    @include respond-to(landscape) {
+      min-width: 300px;
     }
 
     .intro-logo {
@@ -251,7 +254,7 @@ body {
         font-size: $fontsize * 5;
 
         @include respond-to(phone) {
-          font-size: $fontsize * 2.5;
+          font-size: $fontsize * 3.5;
         }
         @include respond-to(landscape) {
           font-size: $fontsize * 4;
@@ -310,6 +313,9 @@ body {
     margin-bottom: 40px;
 
     @include respond-to(landscape) {
+      margin-bottom: 20px;
+    }
+    @include respond-to(phone) {
       margin-bottom: 20px;
     }
 
@@ -427,9 +433,31 @@ body {
   @include respond-to(phone) {
     padding: 40px 0;
   }
+  @include respond-to(landscape) {
+    padding: 40px 0;
+  }
 
-  @media only screen and (max-width: 405px) {
-    // align-items: flex-start;
+  .team-head {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    @media only screen and (max-width: 405px) {
+      align-items: flex-start;
+    }
+
+    p {
+      margin: 20px 0;
+
+      @include respond-to(landscape) {
+        margin: 10px 0;
+      }
+      @include respond-to(phone) {
+        margin: 10px 0;
+      }
+    }
   }
 
   h2 {
@@ -776,20 +804,31 @@ body {
     width: 60%;
     margin: auto;
 
+    @include respond-to(phone) {
+      width: 100%;
+    }
+
 
     .form-group {
       text-align: center;
+      margin-bottom: 20px;
+      width: 100%;
 
       .form-control {
         width: 100%;
         height: 2.5rem;
-        margin-bottom: 20px;
         font-size: $fontsize;
         padding: 0 20px;
         color: $dgray;
         border: 2px solid #ccc;
         border-radius: 4px;
         background-color: #f8f8f8;
+        box-sizing: border-box;
+
+        @include respond-to(phone) {
+          padding: 0 0 0 20px;
+          width: 100%;
+        }
 
 
         &:focus {
@@ -809,6 +848,7 @@ body {
         border-radius: 4px;
         background-color: #f8f8f8;
         resize: none;
+        box-sizing: border-box;
 
         &:focus {
           background-color: $palegreen;
@@ -828,6 +868,10 @@ body {
       border: none;
       border-radius: 2%;
       transition: all .4s;
+
+      @include respond-to(phone) {
+        width: 100%;
+      }
 
       &:hover {
         cursor: pointer;
@@ -903,6 +947,9 @@ body {
         font-weight: 400;
 
         @include respond-to(landscape) {
+          font-size: $fontsize * 2;
+        }
+        @include respond-to(phone) {
           font-size: $fontsize * 2;
         }
       }
