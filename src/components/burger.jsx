@@ -1,18 +1,27 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Burger = (props) => {
   console.log(props.sidebarStatus)
+  let location = useLocation();
 
   let sidebarStyles = {};
+  console.log(location);
+
+  
 
   if (props.sidebarStatus === true) {
-    sidebarStyles.background = "#444";
+    sidebarStyles.background = "#1d6341";
     sidebarStyles.transformTop = "rotate(45deg)";
     sidebarStyles.transformMid = "translateX(20px)";
     sidebarStyles.transformBottom = "rotate(-45deg)";
     sidebarStyles.opacity = "0";
   } else {
-    sidebarStyles.background = "white";
+    if (location.pathname !== "/") {
+      sidebarStyles.background = "#444";
+    } else {
+      sidebarStyles.background = "white";
+    }
     sidebarStyles.transformTop = "rotate(0)";
     sidebarStyles.transformMid = "translateX(0)";
     sidebarStyles.transformBottom = "rotate(0)";

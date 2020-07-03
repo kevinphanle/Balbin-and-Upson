@@ -4,7 +4,6 @@ import { NavLink, useLocation } from 'react-router-dom';
 import Burger from './burger';
 import Sidebar from './sidebar';
 
-import * as menuIcon from '../images/menu.png';
 
 function Navbar(props) {
   const [navBackground, setNavBackground] = useState(false)
@@ -13,7 +12,10 @@ function Navbar(props) {
 
   let location = useLocation();
 
-  const navRef = useRef()
+  const navRef = useRef();
+
+  const sidebarNode = useRef();
+  useOnClickOutside(sidebarNode, () => setSidebar(false));
 
   navRef.current = navBackground
 
@@ -32,7 +34,11 @@ function Navbar(props) {
 
   const handleSidebar = () => {
     console.log("sidebar");
-    setSidebar(!sidebar);
+    if (sidebar === false) {
+      setSidebar(true);
+    } else {
+      setSidebar(false);
+    }
   }
 
   let navbarStyles = {};
@@ -65,9 +71,9 @@ function Navbar(props) {
 
 
   return (
-    <div className="navbar" style={{ backgroundColor: navbarStyles.backgroundColor, borderBottom: navbarStyles.border, height: navbarStyles.height, boxShadow: navbarStyles.boxShadow }}>
+    <div className="navbar" style={{ backgroundColor: navbarStyles.backgroundColor, borderBottom: navbarStyles.border, height: navbarStyles.height, boxShadow: navbarStyles.boxShadow }} ref={sidebarNode}>
       <div className="logo">
-        <NavLink to='/' style={{ color: navbarStyles.textColor }}>Balbin & Upson</NavLink>
+        <NavLink to='/' style={{ color: navbarStyles.textColor }} onClick={()=> setSidebar(false)}>Balbin & Upson</NavLink>
       </div>
 
 
@@ -125,7 +131,7 @@ function Navbar(props) {
       </div>
 
       {
-        sidebar ? <Sidebar/> : null
+        sidebar ? <Sidebar node={sidebarNode} closeSidebar={handleSidebar}/> : null
       }
 
     </div>
@@ -156,5 +162,22 @@ function useWindowDimensions() {
 
   return windowDimensions;
 }
+
+const useOnClickOutside = (ref, handler) => {
+  useEffect(() => {
+    const listener = event => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      handler(event);
+    };
+    document.addEventListener('mousedown', listener);
+    return () => {
+      document.removeEventListener('mousedown', listener);
+    };
+  },
+  [ref, handler],
+  );
+};
 
 export default Navbar;
