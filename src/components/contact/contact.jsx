@@ -22,7 +22,7 @@ function Contact(props) {
     setWait(true);
     axios({
       method: "POST", 
-      url:"http://localhost:3002/send", 
+      url:"https://us-central1-balbinupson-c491a.cloudfunctions.net/sendMail", 
       data:  data
     }).then((response) => {
       if (response.data.status === 'success') {
