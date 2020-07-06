@@ -483,55 +483,96 @@ body {
     width: 80%;
     height: 100%;
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 50px;
-    row-gap: 50px;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
+    // column-gap: 50px;
+    // row-gap: 50px;
     color: $dgray;
 
-    @include respond-to(landscape) {
-      grid-template-columns: 1fr;
-    }
-    @include respond-to(tablet) {
-      grid-template-columns: 1fr;
-    }
-    @include respond-to(phone) {
-      grid-template-columns: 1fr;
-      row-gap: 20px;
-    }
+    
+
+    // @include respond-to(landscape) {
+    //   grid-template-columns: 1fr;
+    // }
+    // @include respond-to(tablet) {
+    //   grid-template-columns: 1fr;
+    // }
+    // @include respond-to(phone) {
+    //   grid-template-columns: 1fr;
+    //   row-gap: 20px;
+    // }
 
 
     .team-member {
       width: 100%;
-      border: 5px solid $dgreen;
+      // border: 5px solid $dgreen;
       display: flex;
       align-items: center;
       background: $offwhite;
       border-radius: 5px;
+      // box-sizing: border-box;
 
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      &:nth-of-type(odd) .info {
+        padding-left: 20px;
+        // margin-left: 0;
+      }
+      &:nth-of-type(even) .info {
+        padding-right: 20px;
+        // margin-left: 0;
+      }
+
+      @include respond-to(tablet) {
+        flex-direction: column;
+        padding: 20px;
+        width: initial;
+
+        &:nth-child(even) {
+          flex-direction: column;
+        }
+      }
       @include respond-to(landscape) {
         flex-direction: column;
         padding: 20px;
         width: initial;
+
+        &:nth-child(even) {
+          flex-direction: column;
+        }
       }
       @include respond-to(phone) {
         flex-direction: column;
         padding: 20px;
         width: initial;
+
+        &:nth-child(even) {
+          flex-direction: column;
+        }
       }
 
       .photo {
-        width: 200px;
-        height: 275px;
-        margin: 20px;
+        width: 50%;
+        height: 100%;
+        // height: 275px;
+        // margin: 20px 0;
+
+        @include respond-to(tablet) {
+          width: 100%;
+          margin: 0;
+        }
 
         @include respond-to(landscape) {
+          margin: 0;
           min-width: 200px;
           width: 100%;
           margin: 0;
         }
         @include respond-to(phone) {
+          margin: 0;
           min-width: 150px;
           width: 100%;
           margin: 0;
@@ -540,13 +581,22 @@ body {
         img {
           width: 100%;
           height: 100%;
+          max-height: auto;
         }
       }
 
       .info {
-        width: 60%;
-        margin: 20px 20px 20px 0;
+        // width: 60%;
+        width: 50%;
+        // margin: 20px 20px 20px 0;
+        // margin-right: 20px;
+        box-sizing: border-box;
 
+        @include respond-to(tablet) {
+          width: 100%;
+          margin: 0;
+          margin-top: 20px;
+        }
         @include respond-to(landscape) {
           width: 100%;
           margin: 0;
@@ -584,6 +634,14 @@ body {
         }
 
         .member-desc {
+          font-size: $fontsize * .9;
+          white-space: pre-wrap;
+          // max-height: 200px;
+          // overflow: auto;
+
+          &:focus {
+            overflow: visible;
+          }
 
           @include respond-to(phone) {
             margin: 0;

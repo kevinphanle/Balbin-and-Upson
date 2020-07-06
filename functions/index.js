@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 var nodemailer = require('nodemailer');
 const admin = require('firebase-admin');
-const cors = require('cors');
+const cors = require('cors')({origin: true});
 
 const creds = require('./config');
 
@@ -10,6 +10,7 @@ admin.initializeApp();
 var transport = {
   service: 'gmail',
   host: 'smtp.gmail.com',
+  secure: false,
   port: 465,
   auth: {
     user: creds.USER,
@@ -19,20 +20,9 @@ var transport = {
 
 var transporter = nodemailer.createTransport(transport)
 
-transporter.verify((error, success) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Server is ready to take messages');
-  }
-});
 
 exports.sendMail = functions.https.onRequest((req, res) => {
-
   cors(req, res, () => {
-
-
-
     var name = req.body.name
     var email = req.body.email
     var phone = req.body.phone
@@ -46,22 +36,25 @@ exports.sendMail = functions.https.onRequest((req, res) => {
   `
 
     const mailOptions = {
-      from: name,
+      from: email,
       to: 'kevinphanle11@gmail.com',
       subject: 'New Message from Contact Form: ' + name,
       html: content
     }
-
-    return transporter.sendMail(mailOptions, (err, data) => {
-      if (err) {
-        return res.json({
-          status: 'fail'
-        })
-      } else {
-        return res.json({
-          status: 'success'
-        })
+    
+    const getStatus = function (error, info) {
+      if (error) {
+        return console.log(error);
       }
+
+      console.log('Message sent: ', info.message)
+    }
+
+    return transporter.sendMail(mailOptions, (error, data) => {
+      if (error) {
+        return res.send({status: "fail"})
+      }
+      return res.send({status: "success"});
     })
   })
 })

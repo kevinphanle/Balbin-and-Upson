@@ -25,6 +25,7 @@ function Contact(props) {
       url:"https://us-central1-balbinupson-c491a.cloudfunctions.net/sendMail", 
       data:  data
     }).then((response) => {
+      console.log(response.data)
       if (response.data.status === 'success') {
         setSent(true)
       }else if(response.data.status === 'fail'){

@@ -19,7 +19,7 @@ function Team() {
               </div>
               <div className="info">
                 <h3>{member.name}</h3>
-                <p className="member-title">{member.title}</p>
+                <p className="member-title">{member.title} <span>{member.credits ? "· " + member.credits : null}</span></p>
                 <p className="member-desc">{member.description}</p>
               </div>
             </div>
