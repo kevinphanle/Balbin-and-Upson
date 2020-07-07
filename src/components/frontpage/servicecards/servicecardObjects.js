@@ -14,7 +14,7 @@ let cards = [
   },
   {
     "title": "Plan",
-    "description": "Long-term tax planning to for your lifestyle.",
+    "description": "Long-term tax planning to fit your lifestyle.",
     "icon": "money-bill-alt",
     "color": '#004346'
   },
