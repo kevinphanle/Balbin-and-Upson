@@ -16,13 +16,13 @@ let team = [
   {
     "name": "Bert",
     "description": "Bert is a seasoned office dog. He says hi when you come in, goes to his bed, and then proceeds to sleep the whole appointment. His favorite part about being the official mascot of Balbin & Upson is definitely the love and admiration his title deserves. \n\nOutside of working hours, he enjoys sleeping in other areas.",
-    "photo": "https://balbin-upson-dev.s3-us-west-1.amazonaws.com/IMG_0651.JPG",
+    "photo": "https://balbin-upson-dev.s3-us-west-1.amazonaws.com/bert-profile.jpg",
     "title": "Mascot"
   },
   {
     "name": "Hank",
     "description": "Hank is the newest member of the team. He’s currently still working on fulfilling all of the duties listed on his job description. Even though he is our official greeter, he is often found sleeping on the job. \n\nPlease check back for further updates on his progress.",
-    "photo": "https://balbin-upson-dev.s3-us-west-1.amazonaws.com/IMG_0651.JPG",
+    "photo": "https://balbin-upson-dev.s3-us-west-1.amazonaws.com/hank-profile.jpg",
     "title": "Greeter"
   }
 ];

@@ -12,7 +12,7 @@ function Intro() {
           <span className="logo-big-parts">Balbin</span> <span>&</span> <span className="logo-big-parts">Upson</span>
         </div>
 
-        <p>Local Tax Business located in South San Jose, helping and educating families and local businesses on federal and state taxes.</p>
+        <p>Local tax business located in South San Jose, helping and educating families and local businesses on federal and state taxes.</p>
 
 
         <a href="#services" className="scroll">

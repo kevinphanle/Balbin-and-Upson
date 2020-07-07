@@ -2,7 +2,7 @@ import React from 'react';
 
 import Intro from './intro';
 import Services from './servicecards/services';
-import Team from './team/team';
+import About from '../aboutus/about';
 
 function FrontPage() {
 
@@ -10,7 +10,8 @@ function FrontPage() {
     <div className="wrapper">
       <Intro />
       <Services />
-      <Team />
+      {/* <Team /> */}
+      <About/>
     </div>
   )
 }

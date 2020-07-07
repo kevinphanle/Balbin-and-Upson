@@ -427,14 +427,16 @@ body {
   align-items: center;
   height: fit-content;
   width: 100%;
-  padding: 80px 0;
+  // padding: 80px 0;
+  padding-top: 60px;
+
   margin-bottom: 20px;
 
   @include respond-to(phone) {
-    padding: 40px 0;
+    // padding: 40px 0;
   }
   @include respond-to(landscape) {
-    padding: 40px 0;
+    // padding: 40px 0;
   }
 
   .team-head {
@@ -462,7 +464,7 @@ body {
 
   h2 {
     color: $dgray;
-    font-size: $fontsize * 3;
+    font-size: $fontsize * 2;
     padding-bottom: 0;
     margin: 0;
 
@@ -498,10 +500,11 @@ body {
     // @include respond-to(tablet) {
     //   grid-template-columns: 1fr;
     // }
-    // @include respond-to(phone) {
-    //   grid-template-columns: 1fr;
-    //   row-gap: 20px;
-    // }
+    @include respond-to(phone) {
+      // grid-template-columns: 1fr;
+      // row-gap: 20px;
+      width: initial;
+    }
 
 
     .team-member {
@@ -552,6 +555,7 @@ body {
         &:nth-child(even) {
           flex-direction: column;
         }
+
       }
 
       .photo {

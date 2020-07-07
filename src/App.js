@@ -7,8 +7,9 @@ import Footer from './components/footer';
 import './styles/App.scss';
 import Covid from './components/covid-19/covid';
 import Resources from './components/resources/resources';
-import About from './components/aboutus/about';
+// import About from './components/aboutus/about';
 import Contact from './components/contact/contact';
+import Team from './components/frontpage/team/team';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Resources/>
         </Route>
         <Route exact path="/about">
-          <About />
+          <Team />
         </Route>
         <Route exact path="/contact">
           <Contact/>
