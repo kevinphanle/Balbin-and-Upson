@@ -10,10 +10,12 @@ import Resources from './components/resources/resources';
 // import About from './components/aboutus/about';
 import Contact from './components/contact/contact';
 import Team from './components/frontpage/team/team';
+import ScrollToTop from './scrollToTop';
 
 function App() {
   return (
     <div className="main">
+      <ScrollToTop />
       <Navbar/>
 
       <Switch>
