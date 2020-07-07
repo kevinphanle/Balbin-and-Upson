@@ -1,0 +1,64 @@
+
+.resources {
+  height: 100%;
+  padding-top: 60px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 80px;
+  color: $dgray;
+
+
+  h2 {
+    text-align: center;
+    font-size: $fontsize * 2;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 80px 0 0 0;
+  }
+
+  p {
+    text-align: center;
+    font-size: $fontsize;
+    margin-bottom: 40px;
+  }
+
+  .links {
+    a {
+      color: $greentext;
+      text-decoration: none;
+      font-size: $fontsize;
+      transition: all .2s;
+      font-weight: bold;
+
+      &:hover {
+        
+        text-decoration: underline;
+      }
+    }
+    
+    table {
+      border: 1px solid lightgray;
+      table-layout: auto;
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+
+      th {
+        background: #f6f6f6;
+        padding: .5rem;
+        color: $dgray;
+        text-align: left;
+      }
+
+      tr {
+
+        td {
+          border: 1px solid $dgray;
+          padding: .5rem;
+          color: $dgray;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

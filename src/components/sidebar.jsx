@@ -7,9 +7,9 @@ const Sidebar = (props) => {
       <NavLink to="/" onClick={props.closeSidebar}>
         Home
       </NavLink>
-      <NavLink to="/covid19" onClick={props.closeSidebar}>
+      {/* <NavLink to="/covid19" onClick={props.closeSidebar}>
         Covid-19
-      </NavLink>
+      </NavLink> */}
       <NavLink to="/resources" onClick={props.closeSidebar}>
         Resources
       </NavLink>

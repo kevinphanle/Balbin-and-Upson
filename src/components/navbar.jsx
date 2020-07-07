@@ -77,13 +77,13 @@ function Navbar(props) {
           {
             width <= 405 ? "B&U" : "Balbin & Upson"
           }
-          </NavLink>
+        </NavLink>
       </div>
 
 
       <div className="right-nav">
-      {
-          width <= 768 ? <Burger click={handleSidebar} sidebarStatus={sidebar}/> :
+        {
+          width <= 768 ? <Burger click={handleSidebar} sidebarStatus={sidebar} /> :
 
             <ul className="nav-links" style={{ color: navbarStyles.textColor }}>
               <li className="nav-link">
@@ -95,7 +95,7 @@ function Navbar(props) {
                   Home
               </NavLink>
               </li>
-              <li className="nav-link">
+              {/* <li className="nav-link">
 
                 <NavLink
                   to="/covid19"
@@ -103,7 +103,7 @@ function Navbar(props) {
                   style={{ color: navbarStyles.textColor }}>
                   Covid-19
               </NavLink>
-              </li>
+              </li> */}
               <li className="nav-link">
 
                 <NavLink
@@ -131,11 +131,11 @@ function Navbar(props) {
             </NavLink>
               </li>
             </ul>
-      }
+        }
       </div>
 
       {
-        sidebar ? <Sidebar node={sidebarNode} closeSidebar={handleSidebar}/> : null
+        sidebar ? <Sidebar node={sidebarNode} closeSidebar={handleSidebar} /> : null
       }
 
     </div>
@@ -180,7 +180,7 @@ const useOnClickOutside = (ref, handler) => {
       document.removeEventListener('mousedown', listener);
     };
   },
-  [ref, handler],
+    [ref, handler],
   );
 };
 
