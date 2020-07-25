@@ -6,6 +6,7 @@
 
   h2 {
     margin: 0;
+    margin-bottom: 60px;
     font-size: $fontsize * 3;
     font-weight: 200;
     max-width: 1000px;
@@ -20,9 +21,9 @@
 
 
   .header-img {
-    display: block;
-    margin: 60px auto;
-    width: 50%;
+    // display: block;
+    // margin: 60px auto;
+    width: 100%;
 
     img {
       width: 100%;

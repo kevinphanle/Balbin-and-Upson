@@ -7,7 +7,7 @@ function About(props) {
     <div className="about">
       <h2>A team of <span>big dreamers</span></h2>
       <div className="header-img">
-        <img src={bert} alt=""/>
+        <img src="https://balbin-upson-dev.s3-us-west-1.amazonaws.com/team%401080.jpg" alt=""/>
       </div>
 
       <div className="aboutus">

@@ -18,7 +18,7 @@ function Team() {
                 <img src={member.photo} alt="" />
               </div>
               <div className="info">
-                <h3>{member.name}</h3>
+                <h3>{member.name}<span className="name-accent"></span></h3>
                 <p className="member-title">{member.title} <span>{member.credits ? "· " + member.credits : null}</span></p>
                 <p className="member-desc">{member.description}</p>
               </div>
